@@ -1,0 +1,50 @@
+.card {
+  background: rgba(93, 148, 220, 0.95);
+  padding: 2rem;
+  border-radius: 100px;
+  box-shadow: 0 2px 8px rgba(170, 28, 28, 0.1);
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+  position: relative;
+  border: 10px solid transparent;
+  background-clip: padding-box;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 8px;
+  padding: 3px;
+  background: linear-gradient(
+    90deg,
+    #000000,
+  );
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.image {
+  border-radius: 30%;
+  margin-bottom: 1rem;
+}
+
+.name {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.age {
+  color: #1d1616;
+  margin: 0.5rem 0;
+}
+
+.description {
+  color: #141010;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
